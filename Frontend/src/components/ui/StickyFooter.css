@@ -1,0 +1,42 @@
+/* Scoped resets for StickyFooter — compensates for Tailwind Preflight being disabled */
+
+.sticky-footer-root {
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.sticky-footer-root *,
+.sticky-footer-root *::before,
+.sticky-footer-root *::after {
+    box-sizing: inherit;
+}
+
+.sticky-footer-root h3 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-footer-root p {
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-footer-root ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sticky-footer-root li {
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-footer-root a {
+    color: inherit;
+    text-decoration: none;
+}

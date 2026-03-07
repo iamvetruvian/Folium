@@ -1,0 +1,13 @@
+.todos-page {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.todos-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  margin-top: 2rem;
+}
