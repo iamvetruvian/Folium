@@ -1,0 +1,11 @@
+.aurora-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.aurora-container>canvas {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}

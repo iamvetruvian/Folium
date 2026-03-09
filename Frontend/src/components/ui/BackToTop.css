@@ -1,0 +1,43 @@
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    z-index: 1000;
+    padding: 0;
+    color: white;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: rgba(205, 208, 215, 0.32);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.arrow-up {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Glass effect as requested */
+.glass {
+    backdrop-filter: blur(22px) saturate(177%);
+    -webkit-backdrop-filter: blur(22px) saturate(177%);
+    background-color: rgba(205, 208, 215, 0.19);
+}
