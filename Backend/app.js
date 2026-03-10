@@ -81,6 +81,7 @@ app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });
 
+
 app.post('/api/login', (req, res, next) => {
   passport.authenticate('local', (err, user, info) => {
     if (err) {

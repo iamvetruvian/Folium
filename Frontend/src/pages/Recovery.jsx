@@ -1,13 +1,30 @@
 import AuthForm from "@/components/auth/AuthForm"
 import { User } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
+import { useParams } from "react-router-dom";
 
-const formHandler = (formData) => {
-    const username = formData.get('username')
-    const password = formData.get('password')
-}
+
 
 export default function Recovery() {
+
+    const formHandler = async (formData) => {
+    const username = formData.get('username')
+    const password = formData.get('password')
+    const confirmPassword = formData.get('confirmPassword')
+    const params = useParams()
+    const token = params.token
+    const response = await fetch('/api/forgot-password/' + token, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password, confirmPassword, token })
+    })
+    const data = await response.json()
+    console.log(data)
+}
+
+
     return (
         <AuthForm
             title="Recover Password"
